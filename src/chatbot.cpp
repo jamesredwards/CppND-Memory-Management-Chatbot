@@ -79,7 +79,9 @@ ChatBot &ChatBot::operator=(ChatBot &&other) {
   if (this == &other) {
     return *this;
   }
-  if (_image != NULL) delete _image;
+  if (_image != NULL) {
+    delete _image;
+  }
   _image = other._image;
   _rootNode = other._rootNode;
   _chatLogic = other._chatLogic;
